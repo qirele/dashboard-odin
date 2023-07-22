@@ -18,8 +18,31 @@ ul {
 
 /* Wide display styling first i guess width=1920*/
 .sidebar {
-  background-color: rgb(0, 200, 255);
-  color: rgb(231, 231, 231);
+  background-color: rgb(0, 154, 196);
+  color: rgb(255, 255, 255);
+  padding: 40px 20px;
+}
+
+.logo-wrapper,
+.nav li {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-top,
+.nav-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.logo-wrapper {
+  margin-bottom: 70px;
+}
+
+.nav-top {
+  margin-bottom: 70px;
 }
 
 .wrapper {
@@ -30,7 +53,7 @@ ul {
 
 .main-wrapper {
   display: grid;
-  grid-template-rows: 208px 1fr; /*header fixed , .main occupy remaining space*/
+  grid-template-rows: auto 1fr; /* header be fixed size , .main occupy remaining space */
 }
 
 .image,
@@ -52,16 +75,46 @@ ul {
   grid-template-columns: auto 1fr auto auto auto;
   gap: 15px;
   margin: 0 0 60px 0;
+  align-items: center;
+}
+
+.header-top .image {
+  width: 50px;
+  height: 50px;
 }
 
 .header-top input {
   width: 60%;
+  appearance: none;
+  border: none;
+  background-color: #b0cdea;
+  height: 35px;
+  border-radius: 50px;
+  padding-left: 20px;
 }
 
 .header-bottom {
   display: grid;
   grid-template-columns: auto 1fr auto auto auto;
   gap: 15px;
+  align-items: center;
+}
+
+.header-bottom .image {
+  width: 80px;
+  height: 80px;
+}
+
+.tag {
+  background-color: rgb(0, 154, 196);
+  padding: 10px 40px;
+  color: white;
+  margin: 0 10px;
+  border-radius: 50px;
+}
+
+.tag:last-of-type {
+  margin-right: 0;
 }
 
 .main {
@@ -121,7 +174,7 @@ ul {
   color: #747474;
 }
 
-.line  {
+.line {
   background-color: rgb(217, 217, 217);
   height: 2px;
   width: 100%;
@@ -138,7 +191,7 @@ ul {
   gap: 20px;
 }
 
-.trending ul li{
+.trending ul li {
   display: flex;
   gap: 20px;
   align-items: start;
@@ -148,6 +201,7 @@ ul {
   color: #747474;
 }
 
-.trending .image{
+.trending .image {
+  /* image freaking shrinking so much it becomes squished, this prevents it*/
   flex-shrink: 0;
 }
