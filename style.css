@@ -93,7 +93,7 @@ img {
   display: grid;
   grid-template-columns: auto 1fr auto auto auto;
   gap: 15px;
-  margin: 0 0 60px 0;
+  margin: 0 0 30px 0;
   align-items: center;
 }
 
@@ -112,6 +112,27 @@ img {
   padding-left: 20px;
 }
 
+.header-top img,
+.header-bottom img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header-top img {
+  width: 30px;
+  height: 30px;
+}
+
+.header-top .profile-pic img {
+  width: 60px;
+  height: 60px;
+}
+
+.header-bottom img {
+  width: 90px;
+  height: 90px;
+}
+
 .header-bottom {
   display: grid;
   grid-template-columns: auto 1fr auto auto auto;
@@ -119,14 +140,9 @@ img {
   align-items: center;
 }
 
-.header-bottom .image {
-  width: 80px;
-  height: 80px;
-}
-
 .tag {
   background-color: rgb(0, 154, 196);
-  padding: 10px 40px;
+  padding: 13px 40px;
   color: white;
   margin: 0 10px;
   border-radius: 50px;
@@ -156,11 +172,17 @@ img {
 }
 
 .card {
-  min-height: 330px;
+  min-height: 300px;
   background-color: #ffffff;
   padding: 50px 20px 50px 35px;
   display: grid;
   grid-template-rows: 30px auto auto;
+}
+
+.card,
+.announcements,
+.trending {
+  border-radius: 10px;
 }
 
 .action-icons {
@@ -227,6 +249,12 @@ img {
   flex-shrink: 0;
 }
 
+.trending img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
 @media screen and (max-width: 1440px) {
   .projects {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -244,14 +272,13 @@ img {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .header-top input {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 840px) {
-  /*gotta make a hamburger menu*/
-  .header-top {
-    display: none;
-  }
-
   /*gotta make a hamburger menu*/
   .sidebar {
     display: none;
