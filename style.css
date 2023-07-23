@@ -95,6 +95,7 @@ img {
 .share {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .header {
@@ -271,6 +272,26 @@ img {
   height: 60px;
 }
 
+.hamburger {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20px;
+  margin-top: 10px;
+  z-index: 100;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
 /*typography*/
 .header-bottom p:last-of-type {
   font-size: 1.6rem;
@@ -285,6 +306,10 @@ img {
 .header-top p {
   font-weight: 600;
   font-size: 1.2rem;
+} 
+
+.sidebar.visible {
+  visibility: visible;
 }
 
 @media screen and (max-width: 1440px) {
@@ -315,9 +340,16 @@ img {
 }
 
 @media screen and (max-width: 840px) {
-  /*gotta make a hamburger menu*/
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
   .sidebar {
-    display: none;
+    display: block;
+    width: min-content;
+    position: fixed;
+    height: 100vh;
+    visibility: hidden;
   }
 
   .header-top p {
@@ -348,6 +380,10 @@ img {
 
   .header-top p {
     font-size: 1rem;
+  }
+
+  .hamburger {
+    visibility: visible;
   }
 }
 
