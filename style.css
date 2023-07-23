@@ -77,6 +77,18 @@ img {
   grid-template-rows: auto 1fr; /* header be fixed size , .main occupy remaining space */
 }
 
+.header img,
+.trending img {
+  cursor: pointer;
+}
+
+.profile-pic img:hover,
+.trending img:hover,
+.profile-pic img:focus,
+.trending img:focus {
+  box-shadow: 0px 0px 3px 3px #ffb703;
+}
+
 .image,
 .star,
 .follow,
@@ -95,11 +107,6 @@ img {
   gap: 15px;
   margin: 0 0 30px 0;
   align-items: center;
-}
-
-.header-top svg {
-  width: 40px;
-  height: 40px;
 }
 
 .header-top input {
@@ -126,6 +133,7 @@ img {
 .header-top .profile-pic img {
   width: 60px;
   height: 60px;
+  margin: 0 20px;
 }
 
 .header-bottom img {
@@ -147,6 +155,13 @@ img {
   margin: 0 10px;
   border-radius: 50px;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.tag:hover,
+.tag:focus {
+  box-shadow: 0px 0px 5px 5px #b0cdea;
 }
 
 .tag:last-of-type {
@@ -177,6 +192,7 @@ img {
   padding: 50px 20px 50px 35px;
   display: grid;
   grid-template-rows: 30px auto auto;
+  border-left: 10px solid #ffb703;
 }
 
 .card,
@@ -255,13 +271,29 @@ img {
   height: 60px;
 }
 
+/*typography*/
+.header-bottom p:last-of-type {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+.sidebar {
+  font-size: 1.2rem;
+}
+
+.header-top p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 @media screen and (max-width: 1440px) {
   .projects {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
-@media screen and (max-width: 1074px) {
+@media screen and (max-width: 1154px) {
   .tag {
     margin: 0;
     padding-left: 15px;
@@ -275,6 +307,10 @@ img {
 
   .header-top input {
     width: 100%;
+  }
+
+  .sidebar {
+    padding-right: 20px;
   }
 }
 
@@ -305,6 +341,14 @@ img {
   .announcements {
     max-width: 100%;
   }
+
+  .header-bottom p:last-of-type {
+    font-size: 1.1rem;
+  }
+
+  .header-top p {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 541px) {
@@ -320,5 +364,9 @@ img {
 
   .header-bottom div:nth-of-type(2) {
     grid-column: 2/-1;
+  }
+
+  .header-top .profile-pic img {
+    margin: 0;
   }
 }
